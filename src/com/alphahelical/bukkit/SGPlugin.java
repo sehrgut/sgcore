@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.alphahelical.bukkit.sgcore;
+package com.alphahelical.bukkit;
 
 import org.bukkit.plugin.java.JavaPlugin;
 
