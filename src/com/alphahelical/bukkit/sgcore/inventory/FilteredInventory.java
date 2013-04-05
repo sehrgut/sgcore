@@ -102,17 +102,17 @@ public class FilteredInventory extends WrappedInventory {
 	
 	public HashMap<Integer, ItemStack> addItem(ItemStack... items) throws IllegalArgumentException {
 		this.checkItems(items);
-		return this.getInnerInventory().addItem(items);
+		return super.addItem(items);
 	}
 
 	public void setContents(ItemStack[] items) throws IllegalArgumentException {
 		this.checkItems(items);
-		this.getInnerInventory().setContents(items);
+		super.setContents(items);
 	}
 
 	public void setItem(int index, ItemStack item) throws IllegalArgumentException {
 		this.checkItems(item);
-		this.getInnerInventory().setItem(index, item);
+		super.setItem(index, item);
 	}
 
 }

@@ -1,0 +1,26 @@
+name: SGCore
+main: com.alphahelical.sgcore.SGCore
+version: 0.1a
+softdepend: [Vault]
+
+commands:
+  ping:
+    description: verifies duplex communication
+    usage: /ping
+    permission: sgcore.ping
+    permission-message: You can't ping. Have you tried Marco Polo?
+
+permissions:
+  sgcore.*:
+    description: Gives access to all SGCore commands
+    children:
+      sgcore.ping: true
+      sgcore.equip.*: true
+  sgcore.ping:
+    description: Allows you to ping the server from chat
+  sgcore.equip.*:
+    description: Allows equipping all controlled items
+    children:
+      sgcore.equip.stick: true
+  sgcore.equip.stick:
+    description: Allows equipping a stick
