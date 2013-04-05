@@ -27,7 +27,6 @@ public class MaterialInfo {
 			Material.WOOD, Material.COBBLESTONE, Material.IRON_INGOT, Material.GOLD_INGOT, Material.DIAMOND);
 
 	
-	@SuppressWarnings("unchecked")
 	public static List<Collection<Material>> ToolItems = Arrays.<Collection<Material>>asList(
 			Arrays.<Material>asList(Material.WOOD_AXE, Material.WOOD_HOE, Material.WOOD_PICKAXE, Material.WOOD_SPADE, Material.WOOD_SWORD),
 			Arrays.<Material>asList(Material.STONE_AXE, Material.STONE_HOE, Material.STONE_PICKAXE, Material.STONE_SPADE, Material.STONE_SWORD),
@@ -43,7 +42,6 @@ public class MaterialInfo {
 	public static List<Material> ArmorMaterials = Arrays.<Material>asList(
 			Material.LEATHER, Material.FIRE, Material.IRON_INGOT, Material.GOLD_INGOT, Material.DIAMOND);
 
-	@SuppressWarnings("unchecked")
 	public static List<Collection<Material>> ArmorItems = Arrays.<Collection<Material>>asList(
 			Arrays.<Material>asList(Material.LEATHER_HELMET, Material.LEATHER_CHESTPLATE, Material.LEATHER_LEGGINGS, Material.LEATHER_BOOTS),
 			Arrays.<Material>asList(Material.CHAINMAIL_HELMET, Material.CHAINMAIL_CHESTPLATE, Material.CHAINMAIL_LEGGINGS, Material.CHAINMAIL_BOOTS),
@@ -65,7 +63,6 @@ public class MaterialInfo {
 	// Property - RepairMap
 	private static Map<Material, Material> repairMap;
 
-	@SuppressWarnings("unchecked")
 	public static Map<Material, Material> getRepairMap() {
 		
 		if(repairMap == null) {

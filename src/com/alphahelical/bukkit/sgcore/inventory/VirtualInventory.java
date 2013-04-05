@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.alphahelical.bukkit;
+package com.alphahelical.bukkit.sgcore.inventory;
 
 import java.util.ArrayList;
 import java.util.HashMap;

@@ -1,5 +1,5 @@
 name: SGCore
-main: com.alphahelical.sgcore.SGCore
+main: com.alphahelical.bukkit.sgcore.SGCore
 version: 0.1a
 softdepend: [Vault]
 
