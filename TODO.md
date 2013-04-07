@@ -1,7 +1,11 @@
 #TODO
 
+##2013-04-06
+- /drop command to drop things at locations, rather than /give, for more immersive spawning
+- easy /{plugname} reload support from SGPlugin 
+
 ##2013-04-04
-- API to drop ItemStacks in the world
+- DONE: API to drop ItemStacks in the world
 - Move GeoIP API from GeoSpawn to SGCore
   - Softdepend GeoIPTools
   - API only instantiates if GeoIPTools is present
