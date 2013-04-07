@@ -3,7 +3,9 @@
  */
 package com.alphahelical.bukkit;
 
+import org.bukkit.Material;
 import org.bukkit.inventory.ItemStack;
+import org.bukkit.inventory.meta.BookMeta;
 import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.inventory.meta.Repairable;
 
@@ -39,6 +41,14 @@ public class ItemInfo {
 	public void setRepairPenalty(int penalty) {
 		if(this.item instanceof Repairable)
 			((Repairable) this.item).setRepairCost(penalty);
+	}
+
+	public boolean hasBookMeta() {
+		return this.item.hasItemMeta() && this.item.getItemMeta() instanceof BookMeta;
+	}
+
+	public boolean isWriteableBook() {
+		return this.item.getType().equals(Material.BOOK_AND_QUILL);
 	}
 	
 }
