@@ -1,5 +1,8 @@
 #TODO
 
+##2013-04-08
+- Rename repo to bukkit-sgcore
+
 ##2013-04-06
 - /drop command to drop things at locations, rather than /give, for more immersive spawning
 - easy /{plugname} reload support from SGPlugin 
