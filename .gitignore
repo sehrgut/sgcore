@@ -2,6 +2,7 @@
 .classpath
 .project
 *.jardesc
+.settings/
 
 # Binary Files
 *.class
