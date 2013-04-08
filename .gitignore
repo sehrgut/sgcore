@@ -1,3 +1,9 @@
+# Eclipse Project Files #
+.classpath
+.project
+*.jardesc
+
+# Binary Files
 *.class
 
 # Package Files #
