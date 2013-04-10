@@ -23,6 +23,7 @@ public final class SGCore extends SGPlugin {
 	protected void onEnabled() {
 		cmdex = new SGCoreCommandExecutor(this);
 		getCommand("ping").setExecutor(cmdex);
+		getCommand("anvil").setExecutor(cmdex);
 		this.getServer().getPluginManager().registerEvents(new ItemFrameListener(), this);
 	}
 	

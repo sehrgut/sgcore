@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.alphahelical.bukkit;
+package com.alphahelical.bukkit.anvil;
 
 import java.util.Iterator;
 import java.util.Map;
@@ -13,6 +13,10 @@ import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.EnchantmentStorageMeta;
 import org.bukkit.inventory.meta.ItemMeta;
+
+import com.alphahelical.bukkit.EnchantmentInfo;
+import com.alphahelical.bukkit.ItemInfo;
+import com.alphahelical.bukkit.MaterialInfo;
 
 /**
  * @author Keith Beckman
@@ -42,7 +46,13 @@ public class VirtualAnvil {
 	public int getScrapCost() { return this.scrapCost; }
 	
 	
+	public int getOldRemainingDurability() {
+		return this.input.getType().getMaxDurability() - this.input.getDurability();
+	}
 	
+	public int getNewRemainingDurability() {
+		return this.result.getType().getMaxDurability() - this.result.getDurability();
+	}
 	
     private void computeCost() {
         ItemStack itemstack = this.input;
@@ -83,7 +93,7 @@ public class VirtualAnvil {
             Enchantment enchantment;
 
             if (itemstack2 != null) {
-            	ItemMeta meta1 = itemstack1.getItemMeta();
+//            	ItemMeta meta1 = itemstack1.getItemMeta();
             	ItemMeta meta2 = itemstack2.getItemMeta();
             	
             	EnchantmentStorageMeta enchantedBook = (meta2 instanceof EnchantmentStorageMeta ? (EnchantmentStorageMeta)meta2 : null);
