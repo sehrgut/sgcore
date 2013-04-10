@@ -22,6 +22,7 @@ import com.alphahelical.collections.Collections;
 public class MaterialInfo {
 
 	//TODO: better way to store this: config file?
+	//TODO: if not config file, at least make the collections immutable?
 	
 	public static List<Material> ToolMaterials = Arrays.<Material>asList(
 			Material.WOOD, Material.COBBLESTONE, Material.IRON_INGOT, Material.GOLD_INGOT, Material.DIAMOND);

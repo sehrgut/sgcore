@@ -27,20 +27,23 @@ public class ItemInfo {
 	}
 	
 	public int getRepairPenalty() {
-		return (this.item instanceof Repairable ? ((Repairable)this.item).getRepairCost() : 0);
+		return (this.item.getItemMeta() instanceof Repairable ? ((Repairable)this.item.getItemMeta()).getRepairCost() : 0);
 	}
 
 	public boolean hasRepairPenalty() {
-		return (this.item instanceof Repairable ? ((Repairable)this.item).hasRepairCost() : false);
+		return (this.item.getItemMeta() instanceof Repairable ? ((Repairable)this.item.getItemMeta()).hasRepairCost() : false);
 	}
 	
 	public boolean isRepairable() {
-		return (this.item instanceof Repairable);
+		return (this.item.getItemMeta() instanceof Repairable);
 	}
 
 	public void setRepairPenalty(int penalty) {
-		if(this.item instanceof Repairable)
-			((Repairable) this.item).setRepairCost(penalty);
+		if(this.item.getItemMeta() instanceof Repairable) {
+			Repairable meta = (Repairable) this.item.getItemMeta();
+			meta.setRepairCost(penalty);
+			this.item.setItemMeta((ItemMeta) meta);
+		}
 	}
 
 	public boolean hasBookMeta() {

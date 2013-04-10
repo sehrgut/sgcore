@@ -9,10 +9,6 @@ commands:
     usage: /ping
     permission: sgcore.ping
     permission-message: You can't ping. Have you tried Marco Polo?
-  anvil:
-    description: repairs items like the anvil, but with no level cap
-    usage: /anvil [cost|repair]
-
 
 permissions:
   sgcore.*:

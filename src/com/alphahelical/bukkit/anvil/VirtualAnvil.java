@@ -32,6 +32,8 @@ public class VirtualAnvil {
 	private Player player;
 	private String newName;
 	
+	private boolean allowOverpricedOperations = true;
+	
 	public VirtualAnvil(Player player, ItemStack input, ItemStack scrap, String newName) {
 		this.player = player;
 		this.input = input.clone();
@@ -291,7 +293,7 @@ public class VirtualAnvil {
                 this.levelCost = 39;
             }
 
-            if (this.levelCost >= 40 && !this.player.getGameMode().equals(GameMode.CREATIVE)) {
+            if (this.levelCost >= 40 && !this.player.getGameMode().equals(GameMode.CREATIVE) && !this.allowOverpricedOperations) {
                 itemstack1 = null;
             }
 
