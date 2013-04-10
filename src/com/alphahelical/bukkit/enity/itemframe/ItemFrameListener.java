@@ -10,7 +10,10 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.hanging.HangingBreakByEntityEvent;
 import org.bukkit.event.player.PlayerInteractEntityEvent;
-import static com.alphahelical.bukkit.enity.itemframe.ItemFrameActions.*;
+
+import com.alphahelical.bukkit.PlayerInteractActions;
+
+import static com.alphahelical.bukkit.PlayerInteractActions.*;
 
 /**
  * @author Keith Beckman
@@ -24,7 +27,7 @@ public class ItemFrameListener implements Listener {
 			
 			Player p = e.getPlayer();
 			ItemFrame f = (ItemFrame) e.getRightClicked();
-			ItemFrameActions a = (p.isSneaking() ? SNEAK_USE : USE);
+			PlayerInteractActions a = (p.isSneaking() ? SNEAK_USE : USE);
 			ItemFrameInteractEvent ev = new ItemFrameInteractEvent(p, f, a);
 			Bukkit.getServer().getPluginManager().callEvent(ev);
 			
@@ -40,7 +43,7 @@ public class ItemFrameListener implements Listener {
 			
 			Player p = (Player) e.getRemover();
 			ItemFrame f = (ItemFrame) e.getEntity();
-			ItemFrameActions a = (p.isSneaking() ? SNEAK_HIT : HIT);
+			PlayerInteractActions a = (p.isSneaking() ? SNEAK_HIT : HIT);
 			ItemFrameInteractEvent ev = new ItemFrameInteractEvent(p, f, a);
 			Bukkit.getServer().getPluginManager().callEvent(ev);
 			

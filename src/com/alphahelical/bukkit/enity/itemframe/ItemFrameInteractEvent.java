@@ -9,6 +9,8 @@ import org.bukkit.event.Cancellable;
 import org.bukkit.event.Event;
 import org.bukkit.event.HandlerList;
 
+import com.alphahelical.bukkit.PlayerInteractActions;
+
 /**
  * @author Keith Beckman
  *
@@ -17,7 +19,7 @@ public class ItemFrameInteractEvent extends Event implements Cancellable {
 
 	private Player player;
 	private ItemFrame target;
-	private ItemFrameActions action;
+	private PlayerInteractActions action;
 	
 	/**
 	 * @return the player
@@ -50,14 +52,14 @@ public class ItemFrameInteractEvent extends Event implements Cancellable {
 	/**
 	 * @return the action
 	 */
-	public ItemFrameActions getAction() {
+	public PlayerInteractActions getAction() {
 		return action;
 	}
 
 	/**
 	 * @param action the action to set
 	 */
-	private void setAction(ItemFrameActions action) {
+	private void setAction(PlayerInteractActions action) {
 		this.action = action;
 	}
 
@@ -92,7 +94,7 @@ public class ItemFrameInteractEvent extends Event implements Cancellable {
 		return handlers;
 	}
 
-	public ItemFrameInteractEvent(Player player, ItemFrame target, ItemFrameActions action) {
+	public ItemFrameInteractEvent(Player player, ItemFrame target, PlayerInteractActions action) {
 		this.setPlayer(player);
 		this.setTarget(target);
 		this.setAction(action);

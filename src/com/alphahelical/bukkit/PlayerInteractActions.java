@@ -1,13 +1,13 @@
 /**
  * 
  */
-package com.alphahelical.bukkit.enity.itemframe;
+package com.alphahelical.bukkit;
 
 /**
  * @author Keith Beckman
  *
  */
-public enum ItemFrameActions {
+public enum PlayerInteractActions {
 	HIT,
 	USE,
 	SNEAK_HIT,

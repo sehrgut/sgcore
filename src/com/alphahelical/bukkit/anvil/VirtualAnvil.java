@@ -163,7 +163,9 @@ public class VirtualAnvil {
                         int k2 = l1 - k1;
                         boolean canEnchant = enchantment.canEnchantItem(itemstack);
 
-                        if (this.player.getGameMode().equals(GameMode.CREATIVE) || materialinfo1.is(Material.ENCHANTED_BOOK)) {
+                        // NULL players are unfettered by enchantability restrictions
+                        if ((this.player == null || this.player.getGameMode().equals(GameMode.CREATIVE)) ||
+                        		materialinfo1.is(Material.ENCHANTED_BOOK)) {
                             canEnchant = true;
                         }
 
@@ -293,7 +295,10 @@ public class VirtualAnvil {
                 this.levelCost = 39;
             }
 
-            if (this.levelCost >= 40 && !this.player.getGameMode().equals(GameMode.CREATIVE) && !this.allowOverpricedOperations) {
+            if (this.levelCost >= 40 &&
+            		// NULL player will be unfettered by price concerns
+            		! (this.player == null || this.player.getGameMode().equals(GameMode.CREATIVE)) &&
+            		! this.allowOverpricedOperations) {
                 itemstack1 = null;
             }
 
