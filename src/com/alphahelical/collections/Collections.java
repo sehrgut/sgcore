@@ -1,5 +1,7 @@
 package com.alphahelical.collections;
 
+import java.util.Arrays;
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -18,5 +20,12 @@ public class Collections {
 		return out;
 	}
 	
+	public static <T> Collection<T> pick(Collection<T> coll, Integer size) {
+		@SuppressWarnings("unchecked")
+		List<T> items = (List<T>) Arrays.asList(coll.toArray());
+		java.util.Collections.shuffle(items);
+		items = items.subList(0, size - 1);
+		return items;
+	}
 	
 }
